@@ -1,0 +1,48 @@
+/* RESOURCES 
+background-white: #11527836
+background-dark: #115278
+*/
+
+.homePage-container {
+  margin-left: 22%;
+  padding-top: 3%;
+}
+
+.container-homepage-big {
+  background-color: #11527836;
+  min-height: 100vh;
+}
+
+.homepage-search-card {
+  box-shadow: 0 0.9125rem 0.9125rem 0 rgb(17 82 120 / 30%);
+}
+
+.homepage-search-title {
+  font-size: 32px;
+  color: rgb(17, 82, 120);
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.homepage-search-description {
+  color: #242526;
+}
+.header-banner {
+  height: 315px;
+}
+
+.homepage-btn-explore {
+  width: 10%;
+  margin: 5px;
+}
+
+.homepage-btn-explore svg {
+  margin-right: 10px;
+}
+
+.searched-container {
+  width: 90%;
+  margin-left: 2.5%;
+}

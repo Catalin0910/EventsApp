@@ -1,0 +1,42 @@
+.profile-page-container {
+  background-color: #11527836;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-page-container .top-nav {
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 0.3125rem 0.9375rem 0 rgb(17 82 120 / 50%);
+}
+
+.profile-page-container .top-nav .navbar-nav .nav-link {
+  color: #242526;
+}
+
+.profile-top-row {
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+}
+
+.benefits-card {
+  box-shadow: 0 0.2125rem 0.2125rem 0 rgb(36 37 38 / 30%);
+}
+
+.benefits-card-subtitle {
+  margin-top: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.profile-page-container .top-nav .navbar-nav .profile-active-option {
+  color: #115278;
+  font-weight: 700;
+  border-bottom: 2px solid grey;
+}

@@ -1,0 +1,85 @@
+import React, { useEffect, useState } from "react";
+
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarContent,
+} from "react-pro-sidebar";
+
+import { FiHome, FiLogOut } from "react-icons/fi";
+import { BsPerson, BsMoon } from "react-icons/bs";
+import { AiOutlinePieChart } from "react-icons/ai";
+import { AiOutlineProfile } from "react-icons/ai";
+import { MdWork } from "react-icons/md";
+
+import "react-pro-sidebar/dist/css/styles.css";
+import "./SideBarMenu.css";
+import AuthService from "../../services/auth/auth.service";
+
+const SideBarMenuBusiness = () => {
+  const [locationHref, setLocationHref] = useState("");
+
+  useEffect(() => {
+    setLocationHref(window.location.pathname);
+  }, []);
+
+  return (
+    <>
+      <div id="header">
+        <ProSidebar>
+          <SidebarHeader>
+            <div className="logotext">
+              <p>DynamicEvents</p>
+            </div>
+          </SidebarHeader>
+          <SidebarContent>
+            <Menu iconShape="square">
+              <MenuItem
+                className={
+                  locationHref === "/business-dashboard" ? "active" : ""
+                }
+                icon={<AiOutlinePieChart />}
+              >
+                <a href="/business-dashboard">Dashboard</a>
+              </MenuItem>
+              <MenuItem
+                className={locationHref === "/home" ? "active" : ""}
+                icon={<AiOutlineProfile />}
+              >
+                <a href="/business-profile">Business profile</a>
+              </MenuItem>
+              <MenuItem
+                className={locationHref === "/employees" ? "active" : ""}
+                icon={<MdWork />}
+              >
+                <a href="/employees">Employees</a>
+              </MenuItem>
+              <MenuItem
+                className={locationHref === "/home" ? "active" : ""}
+                icon={<FiHome />}
+              >
+                <a href="/home">Home</a>
+              </MenuItem>
+              <MenuItem icon={<BsMoon />}>Dark mode</MenuItem>
+            </Menu>
+          </SidebarContent>
+          <SidebarFooter>
+            <Menu iconShape="square">
+              <MenuItem
+                icon={<FiLogOut />}
+                onClick={() => AuthService.logout()}
+              >
+                <a href="/">Logout</a>
+              </MenuItem>
+            </Menu>
+          </SidebarFooter>
+        </ProSidebar>
+      </div>
+    </>
+  );
+};
+
+export default SideBarMenuBusiness;
